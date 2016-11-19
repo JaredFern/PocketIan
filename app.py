@@ -47,9 +47,6 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text)
-                    corrected = ''
-                   
                     words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text) # split string into list of alphabetical
                     corrected = ''                                            # and non alphabetical substrings
                     for word in words:
@@ -110,7 +107,8 @@ def process(message):
     elif test in message:
         course_number = message[5:]
         if course_number in course_dictionary.keys():
-            return "The title of EECS " + course_number + " is " + course_dictionary[course_number]['Title']
+            pass
+            # return "The title of EECS " + course_number + " is " + course_dictionary[course_number]['Title']
         else:
             return "I don't have an EECS course with that number"
 
