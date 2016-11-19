@@ -5,7 +5,11 @@ import json
 import requests
 from flask import Flask, request
 from autocorrect import spell
-from importdata import course_dictionary
+# from importdata import course_dictionary
+
+course_dictionary = {
+  "101": { "Title":"An Intro to Computer Science for Everyone", "Enforced Pre-Requisites":"", "Recommended Pre-Requisites":"", "Unenforced Pre-Requisites":"", "Fall Quarter":"F", "Winter Quarter":"", "Spring Quarter":"", "Core":"C", "Project":"", "Theory":"", "Systems":"", "A.I.":"", "Interfaces":"", "Software Development":"", "Professor":"Hartline"}
+}
 
 app = Flask(__name__)
 
