@@ -6,6 +6,7 @@ import re
 import requests
 from flask import Flask, request
 from autocorrect import spell
+from question_parser import *
 # from importdata import course_dictionary
 
 course_dictionary = {
@@ -45,7 +46,7 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
-                   
+
                     words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text)
                     corrected = ''
                     for word in words:
@@ -102,7 +103,7 @@ def process(message):
 
     if message == "What courses are available next quarter?":
         return 'none u fkn idiot'
-        
+
     elif test in message:
         course_number = message[5:]
         if course_number in course_dictionary.keys():
