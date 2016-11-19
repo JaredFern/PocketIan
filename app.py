@@ -1,10 +1,16 @@
 import os
 import sys
 import json
+import re
 
 import requests
 from flask import Flask, request
+from autocorrect import spell
 # from importdata import course_dictionary
+
+course_dictionary = {
+  "101": { "Title":"An Intro to Computer Science for Everyone", "Enforced Pre-Requisites":"", "Recommended Pre-Requisites":"", "Unenforced Pre-Requisites":"", "Fall Quarter":"F", "Winter Quarter":"", "Spring Quarter":"", "Core":"C", "Project":"", "Theory":"", "Systems":"", "A.I.":"", "Interfaces":"", "Software Development":"", "Professor":"Hartline"}
+}
 
 app = Flask(__name__)
 
@@ -40,7 +46,14 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
                    
-                    response_text = process(message_text)
+                    words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text)
+                    corrected = ''
+                    for word in words:
+                        if re.match(r"[a-zA-Z]+$", word):
+                            word = spell(word)
+                        corrected += word
+
+                    response_text = process(corrected[0:len(corrected)-1]) + "\noriginal:$$" + corrected + '$$'
                     send_message(sender_id, response_text)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
@@ -83,17 +96,21 @@ def log(message):  # simple wrapper for logging to stdout on heroku
     print str(message)
     sys.stdout.flush()
 
+
 def process(message):
     test = "try: "
 
-    if(message == "What courses are available next quarter?"):
+    if message == "What courses are available next quarter?":
         return 'none u fkn idiot'
         
-    # elif(test in message):
-    #     course_number = message[4:]
-    #     return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
-    else:
-        return 'i dont understand wut ur sayin m8'
+    elif test in message:
+        course_number = message[5:]
+        if course_number in course_dictionary.keys():
+            return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
+        else:
+            return "I don't have an EECS course with that number"
+
+    return 'i dont understand wut ur sayin m8'
 
 
 if __name__ == '__main__':
