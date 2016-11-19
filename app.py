@@ -113,7 +113,7 @@ def process(message):
     elif test in message:
         course_number = message[5:]
         if course_number in course_dictionary.keys():
-            return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
+            return "The title of EECS " + course_number + " is " + course_dictionary[course_number]['Title']
         else:
             return "I don't have an EECS course with that number"
 
