@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import re
 
 import requests
 from flask import Flask, request
@@ -45,10 +46,12 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
                    
-                    words = message_text.split(' ')
+                    words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text)
                     corrected = ''
                     for word in words:
-                        corrected += spell(word) + ' '
+                        if re.match(r"[a-zA-Z]+$", word):
+                            word = spell(word)
+                        corrected += spell(word)
 
                     response_text = process(corrected[0:len(corrected)-1]) + "\noriginal:" + corrected
                     send_message(sender_id, response_text)
