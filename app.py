@@ -5,6 +5,7 @@ import json
 import requests
 from flask import Flask, request
 from autocorrect import spell
+from importdata import course_dictionary
 
 app = Flask(__name__)
 
