@@ -91,10 +91,10 @@ def process(message):
     return 'your input text was: ' + message
     if(message == "What courses are available next quarter?"):
         return 'none u fkn idiot'
-    elif(if "try: " in message): #test input="try: 111"
+        
+    elif("try: " in message):
         course_number = message [4:]
         return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
-        ]
     else:
         return 'i dont understand wut ur sayin m8'
 
