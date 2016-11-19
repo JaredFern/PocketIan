@@ -1,6 +1,5 @@
 from models import Course
 course_dictionary = {
-  {
   "101": { "Title":"An Intro to Computer Science for Everyone", "Enforced Pre-Requisites":"", "Recommended Pre-Requisites":"", "Unenforced Pre-Requisites":"", "Fall Quarter":"F", "Winter Quarter":"", "Spring Quarter":"", "Core":C, "Project":"", "Theory":"", "Systems":"", "A.I.":"", "Interfaces":"", "Software Development":"", "Professor":"Hartline"},
   "110": { "Title":"Intro to Computer Programming", "Enforced Pre-Requisites":"", "Recommended Pre-Requisites":"", "Unenforced Pre-Requisites":"", "Fall Quarter":"F", "Winter Quarter":"W", "Spring Quarter":"S", "Core":"", "Project":"", "Theory":"", "Systems":"", "A.I.":"", "Interfaces":"", "Software Development":"", "Professor":"Tumblin, Kumanovic"},
   "111": { "Title":"Fundamentals of Computer Programming I", "Enforced Pre-Requisites":"", "Recommended Pre-Requisites":"", "Unenforced Pre-Requisites":"", "Fall Quarter":"F", "Winter Quarter":"W", "Spring Quarter":"S", "Core":C, "Project":"", "Theory":"", "Systems":"", "A.I.":"", "Interfaces":"", "Software Development":"", "Professor":"Horswill"},
@@ -79,4 +78,4 @@ course_dictionary = {
   "469": { "Title":"Machine Learning and AI for Robotics", "Enforced Pre-Requisites":"Grad standing or permission", "Recommended Pre-Requisites":"", "Unenforced Pre-Requisites":"Some programming experience", "Fall Quarter":"F", "Winter Quarter":"", "Spring Quarter":"", "Core":"", "Project":"", "Theory":"", "Systems":"", "A.I.":"", "Interfaces":"", "Software Development":"", "Professor":"Argall"},
   "473": { "Title":"NUVention: Web", "Enforced Pre-Requisites":"Application only", "Recommended Pre-Requisites":"", "Unenforced Pre-Requisites":"", "Fall Quarter":"", "Winter Quarter":"W", "Spring Quarter":"", "Core":"", "Project":"", "Theory":"", "Systems":"", "A.I.":"", "Interfaces":"", "Software Development":"SDB", "Professor":"Marasco"},
   "474": { "Title":"Probabilistic Graphical Models", "Enforced Pre-Requisites":"349 or grad standing", "Recommended Pre-Requisites":"", "Unenforced Pre-Requisites":"", "Fall Quarter":"F", "Winter Quarter":"", "Spring Quarter":"", "Core":"", "Project":"", "Theory":"", "Systems":"", "A.I.":"", "Interfaces":"", "Software Development":"", "Professor":"Downey"},
-}   
+}
