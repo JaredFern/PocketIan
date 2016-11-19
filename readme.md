@@ -2,6 +2,7 @@
 Automated Northwestern EECS Course Advisor
 
 Handled Questions:
+
     "What are the prerequisites for *?",
     
     "What is * prerequisite for?",
