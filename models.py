@@ -19,8 +19,9 @@ class Professor:
 
 class Program:
     input_format   = ['major', 'minor','masters','theme', 'ba', 'bs', 'bsms', 'ms', 'b.a.', 'b.s.','m.s', 'B.S./M.S.', 'BS/MS', 'honors']
-    def __init__(self, reqs, count):
+    def __init__(self, prereqs, reqs, count):
         self.course_count   = count
+        self.prereqs        = prereqs
         self.reqs           = reqs
 
 class Quarter:

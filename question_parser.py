@@ -17,6 +17,8 @@ question_list= [
     "What courses count for *?",
     "Is * available next quarter?",
     "What classes does * teach?",
+    "What classes does * teach?",    
+
  ]
 
 # Variables: course_name, program, breadth_category, quarter
