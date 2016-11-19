@@ -104,7 +104,7 @@ def process(message):
         return 'none u fkn idiot'
         
     elif test in message:
-        course_number = message[4:]
+        course_number = message[5:]
         if course_number in course_dictionary.keys():
             return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
         else:
