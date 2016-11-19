@@ -53,7 +53,7 @@ def webhook():
                             word = spell(word)
                         corrected += word
 
-                    response_text = process(corrected[0:len(corrected)-1]) + "\noriginal:" + corrected
+                    response_text = process(corrected[0:len(corrected)-1]) + "\noriginal:$$" + corrected + '$$'
                     send_message(sender_id, response_text)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
@@ -104,10 +104,13 @@ def process(message):
         return 'none u fkn idiot'
         
     elif test in message:
-        course_number = message[4:]
-        return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
-    else:
-        return 'i dont understand wut ur sayin m8'
+        course_number = message[5:]
+        if course_number in course_dictionary.keys():
+            return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
+        else:
+            return "I don't have an EECS course with that number"
+
+    return 'i dont understand wut ur sayin m8'
 
 
 if __name__ == '__main__':
