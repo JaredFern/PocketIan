@@ -5,7 +5,7 @@ import json
 import requests
 from flask import Flask, request
 from autocorrect import spell
-# from importdata import course_dictionary
+from importdata import course_dictionary
 
 app = Flask(__name__)
 
@@ -89,15 +89,16 @@ def log(message):  # simple wrapper for logging to stdout on heroku
     print str(message)
     sys.stdout.flush()
 
+
 def process(message):
     test = "try: "
 
-    if(message == "What courses are available next quarter?"):
+    if message == "What courses are available next quarter?":
         return 'none u fkn idiot'
         
-    # elif(test in message):
-    #     course_number = message[4:]
-    #     return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
+    elif test in message:
+        course_number = message[4:]
+        return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
     else:
         return 'i dont understand wut ur sayin m8'
 
