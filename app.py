@@ -84,6 +84,7 @@ def log(message):  # simple wrapper for logging to stdout on heroku
     sys.stdout.flush()
 
 def process(message):
+    return 'your input text was: ' + message
     if(message == "What courses are available next quarter?"):
         return 'none u fkn idiot'
     else:
