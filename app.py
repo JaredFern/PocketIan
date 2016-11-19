@@ -50,7 +50,7 @@ def webhook():
                     for word in words:
                         corrected += spell(word) + ' '
 
-                    response_text = process(corrected[0:len(corrected)-1]), "\noriginal:", corrected
+                    response_text = process(corrected[0:len(corrected)-1]) + "\noriginal:" + corrected
                     send_message(sender_id, response_text)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
