@@ -49,7 +49,7 @@ def webhook():
                     words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text)
                     corrected = ''
                     for word in words:
-                        if re.match(r"[a-zA-Z]+$", word):
+                        if re.match(r"[^a-zA-Z]+$", word):
                             word = spell(word)
                         corrected += spell(word)
 
