@@ -1,17 +1,12 @@
 import os
 import sys
 import json
-import re
 
 import requests
 from flask import Flask, request
 from autocorrect import spell
 from question_parser import *
 # from importdata import course_dictionary
-
-course_dictionary = {
-  "101": { "Title":"An Intro to Computer Science for Everyone", "Enforced Pre-Requisites":"", "Recommended Pre-Requisites":"", "Unenforced Pre-Requisites":"", "Fall Quarter":"F", "Winter Quarter":"", "Spring Quarter":"", "Core":"C", "Project":"", "Theory":"", "Systems":"", "A.I.":"", "Interfaces":"", "Software Development":"", "Professor":"Hartline"}
-}
 
 app = Flask(__name__)
 
@@ -43,7 +38,8 @@ def webhook():
                 if messaging_event.get("message"):  # someone sent us a message
 
                     sender_id = messaging_event["sender"]["id"]  # the facebook ID of the person sending you the message
-                    recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
+                    recipient_id = messaging_event["recipient"][
+                        "id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
                     words = message_text.split(' ')
