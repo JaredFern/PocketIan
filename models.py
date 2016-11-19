@@ -8,4 +8,9 @@ class Course:
         self.quarters_offered = quarters_offered  # list of 3 ints, 0 or 1, [fall, winter, spring]
         self.breadths_fulfilled = breadths_fulfilled  # list of 5 ints, 0 or 1, [theory, systems, interface, A.I.,
         # software]
-        self.professors = professors  # list of strings
+        self.professors = professors  # list of Professor instances
+
+class Professor:
+    def __init__(self, courses, ctec_score):
+        self.courses = courses  # list of Courses
+        self.avg_ctec = ctec_score  # int
