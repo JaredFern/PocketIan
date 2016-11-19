@@ -84,6 +84,8 @@ def log(message):  # simple wrapper for logging to stdout on heroku
 def process(message):
     if(message == "What courses are available next quarter?"):
         return 'none u fkn idiot'
+    else:
+        return 'i dont understand wut ur sayin m8'
 
 
 if __name__ == '__main__':
