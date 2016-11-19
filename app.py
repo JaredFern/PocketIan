@@ -50,6 +50,7 @@ def webhook():
                             word = spell(word)
                         corrected += word
 
+
                     response_text = process(corrected)
                     send_message(sender_id, response_text)
 
@@ -94,6 +95,10 @@ def log(message):  # simple wrapper for logging to stdout on heroku
 
 
 def process(message):
+    # speech tag the message
+    wiki = TextBlob(message)
+    tags = wiki.tags
+    return tags[0][1]
     test = "try: "
 
     if message == "What courses are available next quarter?":
