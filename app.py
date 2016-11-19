@@ -4,6 +4,7 @@ import json
 
 import requests
 from flask import Flask, request
+from autocorrect import spell
 # from importdata import course_dictionary
 
 app = Flask(__name__)
@@ -40,7 +41,12 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
                    
-                    response_text = process(message_text)
+                    words = message_text.split(' ')
+                    corrected = ''
+                    for word in words:
+                        corrected += spell(word) + ' '
+
+                    response_text = process(corrected[0:len(corrected)-1])
                     send_message(sender_id, response_text)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
