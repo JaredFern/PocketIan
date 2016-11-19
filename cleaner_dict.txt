@@ -1,6 +1,4 @@
-#Holds the course_dictionary variable
-course_dictionary = {
-  '101': {'Breadths': [0, 0, 0, 0, 0],
+{'101': {'Breadths': [0, 0, 0, 0, 0],
          'Core': 1,
          'Pre-Requisities': '',
          'Professor': 'Hartline',

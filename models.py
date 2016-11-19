@@ -1,4 +1,6 @@
 class Course:
+    invalid_inp     = "That's not a valid EECS course!"
+
     def __init__(self, number, title, enforced_prereq, recommended_prereq, quarters_offered, breadths_fulfilled,
                  professors):
         self.number = number  # int
@@ -14,3 +16,19 @@ class Professor:
     def __init__(self, courses, ctec_score):
         self.courses = courses  # list of Courses
         self.avg_ctec = ctec_score  # int
+
+class Program:
+    input_format   = ['major', 'minor','masters','theme', 'ba', 'bs', 'bsms', 'ms', 'b.a.', 'b.s.','m.s', 'B.S./M.S.', 'BS/MS', 'honors']
+    def __init__(self, prereqs, reqs, count):
+        self.course_count   = count
+        self.prereqs        = prereqs
+        self.reqs           = reqs
+
+class Quarter:
+    input_format = ['next', 'fall', 'winter', 'spring']
+    invalid_inp = "That's not a real quarter!""
+    def __init__ (self, name, quarter):
+        if (name = 'next'):
+            self.name = 'spring'
+        self.name            = name
+        self.courses_offered = courses
