@@ -1,0 +1,101 @@
+2016-11-19T05:09:28.165580+00:00 app[web.1]: sending message to 1400591043325272: got it, thanks!
+2016-11-19T05:09:28.397387+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=7b80a09b-0ef6-48d7-abd1-dc14781adbf2 fwd="69.171.230.119" dyno=web.1 connect=0ms service=207ms status=200 bytes=161
+2016-11-19T05:09:45.451560+00:00 app[web.1]: sending message to 1400591043325272: got it, thanks!
+2016-11-19T05:09:45.451542+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532185116, u'messaging': [{u'message': {u'seq': 78, u'text': u'k', u'mid': u'mid.1479532185029:7b0dc9c962'}, u'sender': {u'id': u'1400591043325272'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532185029}]}]}
+2016-11-19T05:09:45.658683+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=8983bef2-ea2e-4aa6-b8e0-a9b5f057b25d fwd="69.171.230.117" dyno=web.1 connect=0ms service=201ms status=200 bytes=161
+2016-11-19T05:09:47.648045+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=d9d0f2d1-7e48-463f-9752-0854d34465fb fwd="173.252.74.97" dyno=web.1 connect=0ms service=63ms status=200 bytes=161
+2016-11-19T05:09:47.571591+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532187291, u'messaging': [{u'message': {u'seq': 82, u'text': u'd', u'mid': u'mid.1479532187203:bdde3a5141'}, u'sender': {u'id': u'1312935462083030'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532187203}]}]}
+2016-11-19T05:09:47.571621+00:00 app[web.1]: sending message to 1312935462083030: got it, thanks!
+2016-11-19T05:09:47.632479+00:00 app[web.1]: 400
+2016-11-19T05:09:47.632506+00:00 app[web.1]: {"error":{"message":"(#10) Cannot message users who are not admins, developers or testers of the app until pages_messaging permission is reviewed and the app is live.","type":"OAuthException","code":10,"error_subcode":2018028,"fbtrace_id":"G2lYQq9tOcn"}}
+2016-11-19T05:10:02.766260+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=bd6bf11c-11f6-4930-b45a-a7f3883ebde0 fwd="66.220.146.27" dyno=web.1 connect=1ms service=87ms status=200 bytes=161
+2016-11-19T05:10:02.666510+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532202413, u'messaging': [{u'message': {u'seq': 84, u'text': u'asdf', u'mid': u'mid.1479532202175:7075aa4893'}, u'sender': {u'id': u'1188370521239289'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532202175}]}]}
+2016-11-19T05:10:02.666544+00:00 app[web.1]: sending message to 1188370521239289: got it, thanks!
+2016-11-19T05:10:02.751198+00:00 app[web.1]: 400
+2016-11-19T05:10:02.751207+00:00 app[web.1]: {"error":{"message":"(#10) Cannot message users who are not admins, developers or testers of the app until pages_messaging permission is reviewed and the app is live.","type":"OAuthException","code":10,"error_subcode":2018028,"fbtrace_id":"EPO6DTm7S37"}}
+2016-11-19T05:10:23.117356+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=57ff1660-01f5-4f64-9541-3de15bb7b8b2 fwd="69.171.230.98" dyno=web.1 connect=0ms service=47ms status=200 bytes=161
+2016-11-19T05:10:23.046690+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532222708, u'messaging': [{u'message': {u'seq': 89, u'text': u'suh', u'mid': u'mid.1479532222633:6c09c7fb45'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532222633}]}]}
+2016-11-19T05:10:23.046703+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:10:23.090093+00:00 app[web.1]: 400
+2016-11-19T05:10:23.090154+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"BcMVx5gHWCn"}}
+2016-11-19T05:10:32.689131+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=de67bc4f-9504-486d-a994-731e9bc5d426 fwd="69.171.230.118" dyno=web.1 connect=0ms service=51ms status=200 bytes=161
+2016-11-19T05:10:32.630464+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532232329, u'messaging': [{u'message': {u'seq': 90, u'text': u'a', u'mid': u'mid.1479532232182:4295a5c120'}, u'sender': {u'id': u'1188370521239289'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532232182}]}]}
+2016-11-19T05:10:32.630476+00:00 app[web.1]: sending message to 1188370521239289: got it, thanks!
+2016-11-19T05:10:32.678269+00:00 app[web.1]: 400
+2016-11-19T05:10:32.678294+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"HpAIBhMz+Hi"}}
+2016-11-19T05:10:37.574128+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532237321, u'messaging': [{u'message': {u'seq': 91, u'text': u'a', u'mid': u'mid.1479532237215:bfa3ef7a47'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532237215}]}]}
+2016-11-19T05:10:37.574142+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:10:37.625248+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"CfxEkqeOfK\/"}}
+2016-11-19T05:10:37.625236+00:00 app[web.1]: 400
+2016-11-19T05:10:37.671141+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=abb57a54-1a72-4629-b4dd-76d94995a1d4 fwd="66.220.146.27" dyno=web.1 connect=0ms service=54ms status=200 bytes=161
+2016-11-19T05:11:25.246027+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=25f5854d-ff74-411a-9d38-f4b2b33fef6c fwd="173.252.74.97" dyno=web.1 connect=0ms service=44ms status=200 bytes=161
+2016-11-19T05:11:25.176783+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532284921, u'messaging': [{u'message': {u'seq': 94, u'text': u'Hey', u'mid': u'mid.1479532284833:327c89c432'}, u'sender': {u'id': u'1400591043325272'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532284833}]}]}
+2016-11-19T05:11:25.176798+00:00 app[web.1]: sending message to 1400591043325272: got it, thanks!
+2016-11-19T05:11:25.218332+00:00 app[web.1]: 400
+2016-11-19T05:11:25.218342+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"C+2fXyhSg2I"}}
+2016-11-19T05:11:41.736004+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532301451, u'messaging': [{u'message': {u'seq': 95, u'text': u'j', u'mid': u'mid.1479532301377:1b7196da11'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532301377}]}]}
+2016-11-19T05:11:41.736025+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:11:41.807764+00:00 app[web.1]: 400
+2016-11-19T05:11:41.807773+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"BHZ5DzecXwf"}}
+2016-11-19T05:11:41.840469+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=23336bfd-1a2e-4652-ac2d-bd4481681d62 fwd="173.252.74.99" dyno=web.1 connect=1ms service=75ms status=200 bytes=161
+2016-11-19T05:11:42.503345+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=9944a63b-8602-4661-a37c-8409443ef855 fwd="173.252.74.105" dyno=web.1 connect=1ms service=75ms status=200 bytes=161
+2016-11-19T05:11:42.416022+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532302130, u'messaging': [{u'message': {u'seq': 96, u'text': u'j', u'mid': u'mid.1479532302056:19c96e6479'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532302056}]}]}
+2016-11-19T05:11:42.416064+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:11:42.487577+00:00 app[web.1]: 400
+2016-11-19T05:11:42.487591+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"DLD6xtUVOYF"}}
+2016-11-19T05:11:43.037687+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=1932af6a-e63b-41a0-973c-12c72e5443f0 fwd="173.252.74.116" dyno=web.1 connect=0ms service=42ms status=200 bytes=161
+2016-11-19T05:11:42.965149+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532302628, u'messaging': [{u'message': {u'seq': 97, u'text': u'j', u'mid': u'mid.1479532302445:164c095b61'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532302445}]}]}
+2016-11-19T05:11:42.965169+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:11:43.004572+00:00 app[web.1]: 400
+2016-11-19T05:11:43.004611+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"Djse8ZooBFh"}}
+2016-11-19T05:11:43.405758+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532303150, u'messaging': [{u'message': {u'seq': 98, u'text': u'j', u'mid': u'mid.1479532302660:971cd7c950'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532302660}, {u'message': {u'seq': 99, u'text': u'j', u'mid': u'mid.1479532302851:924aa43e77'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532302851}]}]}
+2016-11-19T05:11:43.405778+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:11:43.458528+00:00 app[web.1]: 400
+2016-11-19T05:11:43.458615+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:11:43.503314+00:00 app[web.1]: 400
+2016-11-19T05:11:43.458537+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"BBfqXmj6DRP"}}
+2016-11-19T05:11:43.503320+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"AH+qlfxn2Lq"}}
+2016-11-19T05:11:43.532776+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=f468a133-8050-42a6-9771-803b46a50652 fwd="69.171.230.102" dyno=web.1 connect=0ms service=99ms status=200 bytes=161
+2016-11-19T05:11:56.831469+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532316553, u'messaging': [{u'message': {u'seq': 101, u'text': u'Hi', u'mid': u'mid.1479532316453:21c12f8913'}, u'sender': {u'id': u'1400591043325272'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532316453}]}]}
+2016-11-19T05:11:56.831488+00:00 app[web.1]: sending message to 1400591043325272: got it, thanks!
+2016-11-19T05:11:56.937850+00:00 app[web.1]: 400
+2016-11-19T05:11:56.937857+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"AYZmlbbGsnb"}}
+2016-11-19T05:11:56.982271+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=8c9a25ca-da0f-465f-8ada-2ded8965fbcf fwd="69.171.230.113" dyno=web.1 connect=1ms service=109ms status=200 bytes=161
+2016-11-19T05:12:02.366476+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532322121, u'messaging': [{u'message': {u'seq': 103, u'text': u'jj', u'mid': u'mid.1479532322049:3e86f51e55'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532322049}]}]}
+2016-11-19T05:12:02.470568+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"AgK4ROAv8AX"}}
+2016-11-19T05:12:02.366493+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:12:02.470533+00:00 app[web.1]: 400
+2016-11-19T05:12:02.501538+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=34423de8-1553-49b8-8281-f0a3278740ab fwd="66.220.146.30" dyno=web.1 connect=0ms service=106ms status=200 bytes=161
+2016-11-19T05:12:03.050168+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:12:03.162711+00:00 app[web.1]: 400
+2016-11-19T05:12:03.162720+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"DMIsSIIOpH1"}}
+2016-11-19T05:12:03.050145+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532322793, u'messaging': [{u'message': {u'seq': 104, u'text': u'dz', u'mid': u'mid.1479532322719:6da6305c79'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532322719}]}]}
+2016-11-19T05:12:03.190377+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=9a26c7f6-5e23-43fd-b30b-a81adccd7e6f fwd="173.252.74.105" dyno=web.1 connect=1ms service=115ms status=200 bytes=161
+2016-11-19T05:12:03.637621+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532323301, u'messaging': [{u'message': {u'seq': 105, u'text': u'zj', u'mid': u'mid.1479532323103:cbe74aad98'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532323103}]}]}
+2016-11-19T05:12:03.637634+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:12:03.747538+00:00 app[web.1]: 400
+2016-11-19T05:12:03.747547+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"DwkWmv0Kbd9"}}
+2016-11-19T05:12:03.774966+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=66fddaa8-9012-4d89-8ec5-0ccd04e4fc3b fwd="69.171.230.116" dyno=web.1 connect=0ms service=112ms status=200 bytes=161
+2016-11-19T05:12:04.161530+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532323900, u'messaging': [{u'message': {u'seq': 106, u'text': u'z', u'mid': u'mid.1479532323405:48f3e2e931'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532323405}, {u'message': {u'seq': 108, u'text': u'fvc', u'mid': u'mid.1479532323786:21a0293c79'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532323786}]}]}
+2016-11-19T05:12:04.161547+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:12:04.274958+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"DS2w\/GIKn+o"}}
+2016-11-19T05:12:04.274950+00:00 app[web.1]: 400
+2016-11-19T05:12:04.275020+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:12:04.385462+00:00 app[web.1]: 400
+2016-11-19T05:12:04.385567+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"GpVJOvIpSNO"}}
+2016-11-19T05:12:04.410194+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=8c620127-67fb-4a1d-b43d-163ea6adcf01 fwd="69.171.230.113" dyno=web.1 connect=1ms service=228ms status=200 bytes=161
+2016-11-19T05:12:04.790971+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532324531, u'messaging': [{u'message': {u'seq': 109, u'text': u'jkg', u'mid': u'mid.1479532324152:0c401c5d81'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532324152}]}]}
+2016-11-19T05:12:04.790989+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:12:04.888832+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"FbwHuDw5257"}}
+2016-11-19T05:12:04.888804+00:00 app[web.1]: 400
+2016-11-19T05:12:04.933554+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=0d1bffd0-8816-4266-907f-3627e7928162 fwd="69.171.230.118" dyno=web.1 connect=0ms service=101ms status=200 bytes=161
+2016-11-19T05:12:06.777796+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=ef3c245b-a9e4-4410-8eb8-729cf80c0f72 fwd="66.220.146.23" dyno=web.1 connect=0ms service=119ms status=200 bytes=161
+2016-11-19T05:12:06.652590+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532326319, u'messaging': [{u'message': {u'seq': 110, u'text': u"k'AGjtdmfz", u'mid': u'mid.1479532326248:91e071c795'}, u'sender': {u'id': u'1350872738309950'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532326248}]}]}
+2016-11-19T05:12:06.652604+00:00 app[web.1]: sending message to 1350872738309950: got it, thanks!
+2016-11-19T05:12:06.769670+00:00 app[web.1]: 400
+2016-11-19T05:12:06.770001+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"G+sZiWjMswY"}}
+2016-11-19T05:12:32.694848+00:00 heroku[router]: at=info method=POST path="/" host=serene-ridge-11139.herokuapp.com request_id=de062293-06f6-482a-9a7f-7b7d71778224 fwd="173.252.74.123" dyno=web.1 connect=0ms service=108ms status=200 bytes=161
+2016-11-19T05:12:32.579330+00:00 app[web.1]: {u'object': u'page', u'entry': [{u'id': u'164338587369875', u'time': 1479532352302, u'messaging': [{u'message': {u'seq': 111, u'text': u"kl'", u'mid': u'mid.1479532352198:c8dfa3b507'}, u'sender': {u'id': u'1188370521239289'}, u'recipient': {u'id': u'164338587369875'}, u'timestamp': 1479532352198}]}]}
+2016-11-19T05:12:32.579343+00:00 app[web.1]: sending message to 1188370521239289: got it, thanks!
+2016-11-19T05:12:32.685540+00:00 app[web.1]: {"error":{"message":"Error validating application. Application has been deleted.","type":"OAuthException","code":190,"fbtrace_id":"GjhD+++zHSQ"}}
+2016-11-19T05:12:32.685533+00:00 app[web.1]: 400
