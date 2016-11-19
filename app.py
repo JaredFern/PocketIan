@@ -84,11 +84,12 @@ def log(message):  # simple wrapper for logging to stdout on heroku
     sys.stdout.flush()
 
 def process(message):
+    test = "try: "
 
     if(message == "What courses are available next quarter?"):
         return 'none u fkn idiot'
         
-    elif("try: " in message):
+    elif(test in message):
         course_number = message[4:]
         return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
     else:
