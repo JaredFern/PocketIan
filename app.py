@@ -8,6 +8,8 @@ from flask import Flask, request
 from autocorrect import spell
 # from question_parser import *
 from importdata import course_dictionary
+import nltk
+nltk.download('all')
 
 app = Flask(__name__)
 
