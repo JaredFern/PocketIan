@@ -10,7 +10,7 @@ question_list= [
     "What are the * requirements?",
     "How do I declare *?",
     "Is * offered * quarter?",
-    "What’s * about?",
+    "What is * about?",
     "What time is * next quarter?",
     "Who teaches * during * quarter?",
     "Is * available next quarter?",
