@@ -15,7 +15,8 @@ question_list= [
     "Who teaches * during * quarter?",
     "Is * available next quarter?",
     "What courses count for *?",
-    "Is * available next quarter?"
+    "Is * available next quarter?",
+    "What classes does * teach?",
  ]
 
 # Variables: course_name, program, breadth_category, quarter
@@ -45,7 +46,6 @@ def match_question(chat_text):
         if (fnmatch(chat_text,question_list[curr_question_ind])):
             print ('question matches:', question_list[curr_question_ind])
             qword_ind = 0
-
             for word in range (0, tokens_len):
                 if (question[qword_ind] == '*') and (tokenized_chat[word] != question[qword_ind + 1]):
                     new_arg += tokenized_chat[word]
@@ -59,7 +59,6 @@ def match_question(chat_text):
             print ("Query Arg", query_args)
             return (curr_question_ind, query_args)
         curr_question_ind += 1
-    print ("No Match")
     return ("Try another question:\n", question_list)
 
 match_question("Who teaches EECS 394 during winter quarter?")
