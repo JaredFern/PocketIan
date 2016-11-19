@@ -1,17 +1,12 @@
 import os
 import sys
 import json
-import re
 
 import requests
 from flask import Flask, request
 from autocorrect import spell
-from question_parser import *
-# from importdata import course_dictionary
 
-course_dictionary = {
-  "101": { "Title":"An Intro to Computer Science for Everyone", "Enforced Pre-Requisites":"", "Recommended Pre-Requisites":"", "Unenforced Pre-Requisites":"", "Fall Quarter":"F", "Winter Quarter":"", "Spring Quarter":"", "Core":"C", "Project":"", "Theory":"", "Systems":"", "A.I.":"", "Interfaces":"", "Software Development":"", "Professor":"Hartline"}
-}
+# from importdata import course_dictionary
 
 app = Flask(__name__)
 
@@ -30,7 +25,6 @@ def verify():
 
 @app.route('/', methods=['POST'])
 def webhook():
-
     # endpoint for processing incoming messaging events
 
     data = request.get_json()
@@ -43,18 +37,17 @@ def webhook():
 
                 if messaging_event.get("message"):  # someone sent us a message
 
-                    sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
-                    recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
-                    message_text = messaging_event["message"]["text"]  # the message's text'
-                   
-                    words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text) # split string into list of alphabetical
-                    corrected = ''                                            # and non alphabetical substrings
-                    for word in words:
-                        if re.match(r"[a-zA-Z]+$", word):  # only spell check the alphabetical strings
-                            word = spell(word)
-                        corrected += word
+                    sender_id = messaging_event["sender"]["id"]  # the facebook ID of the person sending you the message
+                    recipient_id = messaging_event["recipient"][
+                        "id"]  # the recipient's ID, which should be your page's facebook ID
+                    message_text = messaging_event["message"]["text"]  # the message's text
 
-                    response_text = process(corrected[0:len(corrected)-1])
+                    words = message_text.split(' ')
+                    corrected = ''
+                    for word in words:
+                        corrected += spell(word) + ' '
+
+                    response_text = process(corrected[0:len(corrected) - 1])
                     send_message(sender_id, response_text)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
@@ -70,7 +63,6 @@ def webhook():
 
 
 def send_message(recipient_id, message_text):
-
     log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
 
     params = {
@@ -101,20 +93,15 @@ def log(message):  # simple wrapper for logging to stdout on heroku
 def process(message):
     test = "try: "
 
-    if message == "What courses are available next quarter?":
+    if (message == "What courses are available next quarter?"):
         return 'none u fkn idiot'
 
-    elif test in message:
-        course_number = message[5:]
-        if course_number in course_dictionary.keys():
-            return "The title of EECS " + course_number + " is " + course_dictionary[course_number]['Title']
-        else:
-            return "I don't have an EECS course with that number"
-
-    return 'i dont understand wut ur sayin m8'
+    # elif(test in message):
+    #     course_number = message[4:]
+    #     return "The title of EECS " + course_number + "is " + course_dictionary[course_number]
+    else:
+        return 'i dont understand wut ur sayin m8'
 
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-# test commit
