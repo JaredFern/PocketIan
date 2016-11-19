@@ -23,23 +23,33 @@ question_list= [
 def questionToPattern():
     for each in QB:
         each = re.split('[ ?]',each)
-    for each in QB:
-        if (each[0] == '<' and each[-1] == '>'):
-            each =
 
 
 def read_tokenize(chat):
-    tokenized_chat = chat.split (" ")
+    tokenized_chat = re.split ("[ ?]", chat)
     return tokenized_chat
 
 def match_question(tokens):
-    matched_ind = null
+# Question matches the chat input, if every word that isnt a query_args matches
+    tokens_len = len(tokens)
     for question in QB:
-        question_matched = True
-        word_count = len(word)
+        query_args = []
+        matched = True
+
+        if (tokens_len) != len(question)):
+            continue
+
         for word in question:
-            marker = question[0]
-            
-            if (marker != '<'):
-                if (word = tokens)
-        if (matched_ind != null)
+            markers = [question[0], question[-1]]
+            if (markers == ['<', '>']):
+                query_args.append(word)
+            else:
+                if (word != tokens[qword_count]):
+                    matched = False
+                    break
+
+        if matched == True:
+            return queryDB(question, query_args)
+    return ("Try another question:\n", question_list)
+
+def  queryDB():
