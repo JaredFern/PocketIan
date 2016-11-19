@@ -57,7 +57,7 @@ def match_question(chat_text):
                 else:
                     qword_ind += 1
             print ("Query Arg", query_args)
-            return queryDB(curr_question_ind, query_args)
+            return (curr_question_ind, query_args)
         curr_question_ind += 1
     print ("No Match")
     return ("Try another question:\n", question_list)
