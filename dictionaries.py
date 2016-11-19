@@ -2,10 +2,10 @@ from models import Professor, Program
 
 # Curriculum Requirements
 program_dict = {
-    "masters": {"Unit Total": "12 Units","Pre-Requisites":"EECS 101, 111, 211, 212 , 213, 214","Requirements":"Complete 12 courses with B or better. At least 3 courses must be 400 level. Pass MS examinations." }
-    "major": {"Unit Total: 14 Units", "Pre-Requisites": "MATH 220, 224, 230\STATS 210 or MATH 310-1", "Requirements": "Core (6 Units): EECS 101, 111, 211, 212, 213, 214\nBreadth(5 Units): One course in each breadth area\nProject(2 Units): Two project-oriented courses"}
-    "minor": {'Unit Total': '9 Units', 'Pre-Requisites': 'MATH 220, 224, 230\nGEN ENG 205-1,2,3  or 206-1,2,3', 'Requirements': 'Core(6 Units): EECS 101, 111, 211, 212, 213, 214\nBreadth(3 Units): 3 courses each from different breadth areas'}
-    "theme": {"Unit Total": '7 Units', 'Requirements':"Choose seven courses total from Social & Behavioral Sciences and Humanities. A maximum of five courses may be chosen from a single category."}
+    "masters": {"Unit Total": "12 Units","Pre-Requisites":"EECS 101, 111, 211, 212 , 213, 214","Requirements":"Complete 12 courses with B or better. At least 3 courses must be 400 level. Pass MS examinations." },
+    "major": {"Unit Total": "14 Units", "Pre-Requisites": "MATH 220, 224, 230\STATS 210 or MATH 310-1", "Requirements": "Core (6 Units): EECS 101, 111, 211, 212, 213, 214\nBreadth(5 Units): One course in each breadth area\nProject(2 Units): Two project-oriented courses"},
+    "minor": {'Unit Total': '9 Units', 'Pre-Requisites': 'MATH 220, 224, 230\nGEN ENG 205-1,2,3  or 206-1,2,3', 'Requirements': 'Core(6 Units): EECS 101, 111, 211, 212, 213, 214\nBreadth(3 Units): 3 courses each from different breadth areas'},
+    "theme": {"Unit Total": '7 Units', 'Requirements':"Choose seven courses total from Social & Behavioral Sciences and Humanities. A maximum of five courses may be chosen from a single category."},
     "honors": {'Unit Total': 'Two or More Quarters of Independent Study', 'Requirements': 'Cumulative GPA of 3.50 or higher, At least three units of advanced study'}
 }
 
@@ -14,7 +14,7 @@ professors_dictionary = {
     'Argall':Professor(['301','469'], 5.00),
     'Birnbaum':Professor(['337','338','395'], 3.70),
     'Bustamante':Professor(['343','345','395'], 5.07),
-    'Campanoni':Professor(['322', '395'], 5.40)
+    'Campanoni':Professor(['322', '395'], 5.40),
     'Xin Chen':Professor(['340','350','354','395'],4.99),
     'Yan Chen':Professor(['395'],4.35),
     'Cossairt':Professor(['395','395'],5.15),
@@ -24,6 +24,7 @@ professors_dictionary = {
     'Duggan':Professor(['339','395'],4.15),
     'Findler':Professor(['321','395','395'],5.21),
     'Forbus':Professor(['344','370','371'],4.69),
+    'G. Memik':Professor(['361'],4.74),
     'Gergle':Professor(['395'],5.28),
     'Guo':Professor(['428'],5.50),
     'Hammond':Professor(['348'],4.46),
@@ -284,6 +285,13 @@ course_dictionary = {
          'Project': 1,
          'Quarters': [1, 0, 0],
          'Title': 'Network Penetration and Security'},
+ '361': {'Breadths': [0, 0, 0, 0, 0],
+         'Core': 0,
+         'Pre-Requisities': '(213 or 230) or (303 and 355)',
+         'Professor': 'G. Memik',
+         'Project': 0,
+         'Quarters': [1, 0, 0],
+         'Title': 'Computer Architecture'},
  '368': {'Breadths': [0, 0, 0, 0, 0],
          'Core': 0,
          'Pre-Requisities': '213 and (211 or 230), Students should have the following prerequisites, or obtain permission from the instructor: Basic understanding of computer architecture (see prerequisites by topic, below) EECS 213 or equivalent understanding of computer systems (see prerequisites by topic) EECS 211 or EECS 230 or equivalent intermediate C programming experience Useful but not required: EECS 311, EECS 361, EECS 358.',
