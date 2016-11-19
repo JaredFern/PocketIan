@@ -46,15 +46,21 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
+<<<<<<< HEAD
 
                     words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text)
                     corrected = ''
+=======
+                   
+                    words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text) # split string into list of alphabetical
+                    corrected = ''                                            # and non alphabetical substrings
+>>>>>>> 624bbe7865f571cbd4966421a657730525ada8be
                     for word in words:
-                        if re.match(r"[a-zA-Z]+$", word):
+                        if re.match(r"[a-zA-Z]+$", word):  # only spell check the alphabetical strings
                             word = spell(word)
                         corrected += word
 
-                    response_text = process(corrected[0:len(corrected)-1]) + "\noriginal:$$" + corrected + '$$'
+                    response_text = process(corrected[0:len(corrected)-1])
                     send_message(sender_id, response_text)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
