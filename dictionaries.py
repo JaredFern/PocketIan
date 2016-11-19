@@ -1,3 +1,56 @@
+from models import Professor, Program
+
+# Curriculum Requirements
+program_dict = {
+    "masters": {"Unit Total": "12 Units","Pre-Requisites":"EECS 101, 111, 211, 212 , 213, 214","Requirements":"Complete 12 courses with B or better. At least 3 courses must be 400 level. Pass MS examinations." }
+    "major": {"Unit Total: 14 Units", "Pre-Requisites": "MATH 220, 224, 230\STATS 210 or MATH 310-1", "Requirements": "Core (6 Units): EECS 101, 111, 211, 212, 213, 214\nBreadth(5 Units): One course in each breadth area\nProject(2 Units): Two project-oriented courses"}
+    "minor": {'Unit Total': '9 Units', 'Pre-Requisites': 'MATH 220, 224, 230\nGEN ENG 205-1,2,3  or 206-1,2,3', 'Requirements': 'Core(6 Units): EECS 101, 111, 211, 212, 213, 214\nBreadth(3 Units): 3 courses each from different breadth areas'}
+    "theme": {"Unit Total": '7 Units', 'Requirements':"Choose seven courses total from Social & Behavioral Sciences and Humanities. A maximum of five courses may be chosen from a single category."}
+    "honors": {'Unit Total': 'Two or More Quarters of Independent Study', 'Requirements': 'Cumulative GPA of 3.50 or higher, At least three units of advanced study'}
+}
+
+professors_dictionary = {
+    'Alshurafa':Professor(['395'], 4.07),
+    'Argall':Professor(['301','469'], 5.00),
+    'Birnbaum':Professor(['337','338','395'], 3.70),
+    'Bustamante':Professor(['343','345','395'], 5.07),
+    'Campanoni':Professor(['322', '395'], 5.40)
+    'Xin Chen':Professor(['340','350','354','395'],4.99),
+    'Yan Chen':Professor(['395'],4.35),
+    'Cossairt':Professor(['395','395'],5.15),
+    'De':Professor(['335','395'],5.02),
+    'Dinda':Professor(['213','339','340','395','441'],4.43),
+    'Downey':Professor(['349','395','474'],4.75),
+    'Duggan':Professor(['339','395'],4.15),
+    'Findler':Professor(['321','395','395'],5.21),
+    'Forbus':Professor(['344','370','371'],4.69),
+    'Gergle':Professor(['395'],5.28),
+    'Guo':Professor(['428'],5.50),
+    'Hammond':Professor(['348'],4.46),
+    'Hardavellas':Professor(['368'],4.43),
+    'Hartline':Professor(['101','336'],4.15),
+    'Henschen':Professor(['349','395','474'],5.06),
+    'Horn':Professor(['313','330'],4.54),
+    'Horswill':Professor(['111','214','395','395'],5.05),
+    'Joseph':Professor(['205'],4.74),
+    'Kao':Professor(['395'],5.00),
+    'Katsaggelos':Professor(['395'],5.04),
+    'Kuzmanovic':Professor(['110-P','340','440','444'],4.16),
+    'Marasco':Professor(['473-1','473-2'],3.81),
+    'Pardo':Professor(['349','352'],5.01),
+    'Riesbeck':Professor(['325','394'],4.51),
+    'Rubenstein':Professor(['395','395'],5.00),
+    'S. Memik':Professor((['303','459']),4.82),
+    'Sood':Professor(['211'],4.99),
+    'Tov':Professor(['395'],3.70),
+    'Trajcevski':Professor(['230','369','395','395'],4.84),
+    'Tumblin':Professor(['110-C','351','395'],3.78),
+    'Vijayaraghavan':Professor(['212'],4.64),
+    'Y. Wu':Professor(['332','433'],4.9),
+    'Zhang':Professor(['395'],5.93),
+    'Zhou':Professor(['395'],4.14),
+    'Zubek':Professor(['395'],4.89)
+}
 #Holds the course_dictionary variable
 course_dictionary = {
   '101': {'Breadths': [0, 0, 0, 0, 0],

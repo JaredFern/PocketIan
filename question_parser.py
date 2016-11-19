@@ -6,17 +6,20 @@ question_list, question_list_parsed =[], []
 
 question_list= [
     "What are the prerequisites for *?",
-    "What is * prerequisite for?",
     "What are the * requirements?",
     "How do I declare *?",
     "Is * offered * quarter?",
-    "What is * about?",
     "What time is * next quarter?",
     "Who teaches * during * quarter?",
     "Is * available next quarter?",
     "What courses count for *?",
     "Is * available next quarter?",
     "What classes does * teach?",
+    "What classes count for *?"
+    "Does * count for *?""
+    # "What is * about?",
+    # "What is * prerequisite for?",
+
  ]
 
 # Variables: course_name, program, breadth_category, quarter
@@ -33,6 +36,7 @@ def read_tokenize(chat):
     return tokenized_chat
 
 def match_question(chat_text):
+    print (chat_text)
     tokenized_chat          =  read_tokenize(chat_text)
     question_list_parsed    = questionToPattern()
 
@@ -60,4 +64,4 @@ def match_question(chat_text):
             return (curr_question_ind, query_args)
     return ("Try another question:\n", question_list)
 
-match_question("Who teaches EECS 394 during winter quarter?")
+match_question("Who teaches 394 during winter quarter?")
