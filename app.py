@@ -7,7 +7,7 @@ import requests
 from flask import Flask, request
 from autocorrect import spell
 # from question_parser import *
-from imporstdata import course_dictionary
+from dictionaries import responses
 
 app = Flask(__name__)
 
@@ -97,8 +97,8 @@ def process(message):
     message_l = message.lower()
     temp_msg = re.sub(r'[^\w\s]', '', temp_msg)
     temp_msg = temp_msg.lower()
-    if message_l in responses:
-        return responses[message_l]
+    if temp_msg in responses:
+        return responses[temp_msg]
 
     return match_question(message)
     # test = "try: "
