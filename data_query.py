@@ -37,24 +37,24 @@ def queryDB(question_num, query_args):
             if course_dict[class_name][Quarters][quarter_num] == 1:
                 return "Yes, " + class_name + " is offered in the " + quarter
             else:
-            quarters_offered = []
-            for i in range(3):
-                num = course_dict[class_name][Quarters][i]
-                if num == 1:
-                    quarters_offered.append(quarters[i])
-            if len(quarters_offered) == 0:
-                return "Sorry, " + class_name + " is not offered this year"
-            if len(quarters_offered) == 1:
-                return "No, but " + class_name + "is offered in the " + quarters_offered[0]
-            if len(quarters_offered) == 2:
-                return "No, but " + class_name +" is offered in the " + quarters_offered[0] + "and the " + quarters_offered[1]
+                quarters_offered = []
+                for i in range(3):
+                    num = course_dict[class_name][Quarters][i]
+                    if num == 1:
+                        quarters_offered.append(quarters[i])
+                if len(quarters_offered) == 0:
+                    return "Sorry, " + class_name + " is not offered this year"
+                if len(quarters_offered) == 1:
+                    return "No, but " + class_name + "is offered in the " + quarters_offered[0]
+                if len(quarters_offered) == 2:
+                    return "No, but " + class_name +" is offered in the " + quarters_offered[0] + "and the " + quarters_offered[1]
         else:
             return ("I don't think that's a valid EECS course!")
 
     elif (question_num == 5):
         course_num = query_args[0]
         if(class_name in course_dict):
-            prof = course_dict[class_name][Quarters][Professor]:
+            prof = course_dict[class_name][Quarters][Professor]
             return "Professor " + prof + "teaches that class."
         else:
             return "I don't think that's a valid EECS class."
@@ -76,7 +76,7 @@ def queryDB(question_num, query_args):
             return "I don't understand what breadth requirement that is"
             
         breadth_match = []     
-        for each in course_dictionary::
+        for each in course_dictionary:
             if course_dictionary[each]['Breadths'][breadth_index]:
                 breadth_match.append(each)    
         
@@ -136,7 +136,7 @@ def queryDB(question_num, query_args):
         course = query.args[0]
         
         if course in course_dictionary:
-            breadth_list = course_dictionary[course]['Breadths']:
+            breadth_list = course_dictionary[course]['Breadths']
             if 1 in breadth_list:
                 return_message = 'EECS ' + course + ' fulfills '
                 if breadth_list[0]:

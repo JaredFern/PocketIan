@@ -2,7 +2,7 @@ import os
 import sys
 import json
 import re
-
+from question_parser import * 
 import requests
 from flask import Flask, request
 from autocorrect import spell
@@ -94,19 +94,20 @@ def log(message):  # simple wrapper for logging to stdout on heroku
 
 
 def process(message):
-    test = "try: "
+    return match_question(message)
+    # test = "try: "
 
-    if message == "What courses are available next quarter?":
-        return 'none u fkn idiot'
+    # if message == "What courses are available next quarter?":
+    #     return 'none u fkn idiot'
 
-    elif test in message:
-        course_number = message[5:]
-        if course_number in course_dictionary.keys():
-            return "The title of EECS " + course_number + " is " + course_dictionary[course_number]['Title']
-        else:
-            return "I don't have an EECS course with that number"
+    # elif test in message:
+    #     course_number = message[5:]
+    #     if course_number in course_dictionary.keys():
+    #         return "The title of EECS " + course_number + " is " + course_dictionary[course_number]['Title']
+    #     else:
+    #         return "I don't have an EECS course with that number"
 
-    return 'i dont understand wut ur sayin m8'
+    # return 'i dont understand wut ur sayin m8'
 
 
 if __name__ == '__main__':
