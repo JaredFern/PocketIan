@@ -156,6 +156,10 @@ def queryDB(question_num, query_args):
 
     elif (question_num == 11):  # How are *'s CTEC's?
         prof = query_args[0]
+        lower_profs = []
+        for key in professors_dictionary:
+            if prof == key.lower():
+                prof = key
         if prof in professors_dictionary:
             score = professors_dictionary[prof].avg_ctec
             return "That professor is great, their average CTEC score is " + score
