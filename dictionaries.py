@@ -608,6 +608,7 @@ course_dictionary = {
          'Quarters': [1, 0, 0],
          'Title': 'Probabilistic Graphical Models'}}
 
+
 responses = {
     'hi':'Hello, there.',
     'bye':'Good luck in your endeavors!',
