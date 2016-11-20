@@ -56,7 +56,6 @@ def read_tokenize(chat):
     lower_profs     = []
     for each in professors_dictionary.keys():
         lower_profs.append(each.lower())
-        print (type(each))
 
     for i in range(len(tokenized_chat)):
         if (tokenized_chat[i] in lower_profs or\
@@ -69,7 +68,7 @@ def read_tokenize(chat):
         tokenized_chat[i] = spell(tokenized_chat[i])
 
 
-    print (tokenized_chat)
+    # print (tokenized_chat)
     return tokenized_chat
 
 
@@ -85,8 +84,8 @@ def match_question(chat_text):
     tokenized_chat = read_tokenize(chat_text)
     # tokenized question list, no punctuation
     question_list_parsed = questionToPattern()
+    # print (question_list_parsed)
     curr_question_ind = 0
-
     for question in question_list_parsed:
         query_args, new_arg = [], []
         question_len = len(question)
@@ -125,5 +124,5 @@ def match_question(chat_text):
         curr_question_ind += 1
     return ("Try another question:\n") # + str(question_list)[1:-1])
 
-print (match_question("what are the prequisittes for eecs 348?"))
-print (match_question("how are gergle's CTECs?"))
+# print (match_question("what are the prequisittes for eecs 348?"))
+# print (match_question("How are gergle's CTECs?"))
