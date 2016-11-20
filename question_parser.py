@@ -111,8 +111,3 @@ def match_question(chat_text):
             return queryDB(curr_question_ind, query_args)
         curr_question_ind += 1
     return ("Try another question:\n") # + str(question_list)[1:-1])
-
-
-temp_msg = re.sub(r'[^\w\s]', '', temp_msg)
-temp_msg = temp_msg.lower()
-print match_question("what are the prequisittes for eecs 348?")
