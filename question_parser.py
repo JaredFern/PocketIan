@@ -29,7 +29,7 @@ question_list = [
 
     "Does * count for the project requirement?",
     "Does * count for the breadth requirement?",
-    "How are *'s CTEC's?",
+    "How are *'s CTECs?",
     "What courses are available * quarter?"
 
     # "What is * about?",
@@ -49,13 +49,15 @@ def questionToPattern():
 
 
 def read_tokenize(chat):
-    chat = re.sub(r'[^\w\s]', '', chat)
+    chat = re.sub(r'[^\w\s\']', '', chat)
     chat = chat.lower()
-    tokenized_chat = re.split("[ ]", chat)
+    tokenized_chat = re.split("[ |\']", chat)
     for i in range(len(tokenized_chat)):
         # print (tokenized_chat[i])
-        if (tokenized_chat[i] in professors_dictionary.keys() or tokenized_chat[i] == "memik" or tokenized_chat[i]== "eecs" or tokenized_chat[i] == "wu"):
+        if (tokenized_chat[i] in professors_dictionary.keys() or tokenized_chat[i] in professors_dictionary.keys() or  tokenized_chat[i] == "memik" or tokenized_chat[i]== "eecs" or tokenized_chat[i] == "wu"):
             continue
+        print (tokenized_chat[i])
+
         tokenized_chat[i] = spell(tokenized_chat[i])
     return tokenized_chat
 
@@ -108,8 +110,10 @@ def match_question(chat_text):
                     # print ("not added", question[word_ind])
                     qword_ind += 1
             # print (query_args)
+            print ('Question: ', question_list[curr_question_ind], query_args)
             return queryDB(curr_question_ind, query_args)
         curr_question_ind += 1
     return ("Try another question:\n") # + str(question_list)[1:-1])
 
 match_question("what are the prequisittes for eecs 348?")
+match_question("how are downey's CTEC's?")
