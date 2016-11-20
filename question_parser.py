@@ -29,7 +29,7 @@ question_list = [
 
     "Does * count for the project requirement?",
     "Does * count for the breadth requirement?",
-    "How are *'s CTECs?",
+    "How are * s CTECs?",
     "What courses are available * quarter?"
 
     # "What is * about?",
@@ -57,18 +57,20 @@ def read_tokenize(chat):
     for each in professors_dictionary.keys():
         lower_profs.append(each.lower())
 
+
     for i in range(len(tokenized_chat)):
+        print (spell(tokenized_chat[i]))
         if (tokenized_chat[i] in lower_profs or\
             tokenized_chat[i] == "memik" or\
             tokenized_chat[i] == "eecs" or\
             tokenized_chat[i] == "wu" or \
             tokenized_chat[i] == "ctecs"):
             continue
-
         tokenized_chat[i] = spell(tokenized_chat[i])
 
 
-    # print (tokenized_chat)
+
+    print (tokenized_chat)
     return tokenized_chat
 
 
@@ -91,7 +93,7 @@ def match_question(chat_text):
         question_len = len(question)
         tokens_len = len(tokenized_chat)
 
-        if (fnmatch(chat_text, question_list[curr_question_ind])):
+        if (fnmatch((" ".join(tokenized_chat) +"?"), question_list[curr_question_ind].lower())):
             # print ('question matches:', question_list[curr_question_ind])
             qword_ind = 0
             for word_ind in range(0, tokens_len):
@@ -124,5 +126,5 @@ def match_question(chat_text):
         curr_question_ind += 1
     return ("Try another question:\n") # + str(question_list)[1:-1])
 
-print (match_question("What are the prerequisites for eecs 348?"))
+print (match_question("What are the prerequisittes for eecs 348?"))
 print (match_question("How are gergle's CTECs?"))
