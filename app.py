@@ -97,7 +97,7 @@ def process(message):
     message_l = message.lower()
     temp_msg = re.sub(r'[^\w\s]', '', temp_msg)
     temp_msg = temp_msg.lower()
-    if message_l in responses:
+    if temp_msg in responses:
         return responses[message_l]
 
     return match_question(message)
