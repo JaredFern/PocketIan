@@ -612,6 +612,7 @@ course_dictionary = {
 responses = {
     'hi':'Hello, there.',
     'hello':'Hello, there.',
+    'hey':'Hello, there.',
     'suh dude':'oh shit whaddup', 
     'thanks':'No problem',
     'thank you': 'No problem',
