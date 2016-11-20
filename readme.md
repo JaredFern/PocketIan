@@ -1,7 +1,7 @@
 # PocketIan Facebook ChatBot
 Automated Northwestern EECS Course Advisor
 
-Handled Questions:
+Sample Questions:
     
     "What are the prerequisites for *?",   
     "What do I need to take for *?",        
