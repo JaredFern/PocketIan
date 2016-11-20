@@ -5,7 +5,7 @@ def queryDB(question_num, query_args):
 
     if (question_num == 0 or question_num == 1):
         if (query_args[0] in course_dictionary):
-            prereqs = course_dictionary[query_args[0]]["Pre-Requisites"]
+            prereqs = course_dictionary[query_args[0]]["Pre-Requisities"]
         else:
             return ("I don't think that's a valid EECS course.")
         return "The prerequisites for " + query_args[0] + ": " + prereqs
@@ -54,8 +54,8 @@ def queryDB(question_num, query_args):
 
     elif (question_num == 5):
         course_num = query_args[0]
-        if(class_name in course_dictionary):
-            prof = course_dictionary[class_name]["Quarters"]["Professor"]
+        if(course_num in course_dictionary):
+            prof = course_dictionary[course_num]["Quarters"]["Professor"]
             return "Professor " + prof + "teaches that class."
         else:
             return "I don't think that's a valid EECS class."
