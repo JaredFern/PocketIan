@@ -611,6 +611,10 @@ course_dictionary = {
 
 responses = {
     'hi':'Hello, there.',
+    'hello':'Hello, there.',
+    'suh dude':'oh shit whaddup', 
+    'thanks':'No problem',
+    'thank you': 'No problem',
     'bye':'Good luck in your endeavors!',
     'what are you up to?': 'Real Ian is researching AI and interactive entertainment',
     'what\'s your favorite class': 'The university offers a wide range of classes, but I enjoy the ones I teach the most'
