@@ -87,10 +87,11 @@ def match_question(chat_text):
                         query_args.append(join_lower(new_arg))
                         new_arg = []
                         qword_ind += 2
-                    elif (length_exc == True):
+                    elif (length_exc == True ):
                         new_arg += curr_token
+                    if (length_exc == True and word_ind == tokens_len -1 ):
                         query_args.append(join_lower(new_arg))
-                        
+
                 else:
                     print ("not added", question[word_ind])
                     qword_ind += 1
