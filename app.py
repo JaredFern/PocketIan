@@ -7,7 +7,7 @@ import requests
 from flask import Flask, request
 from autocorrect import spell
 # from question_parser import *
-from importdata import course_dictionary
+from imporstdata import course_dictionary
 
 app = Flask(__name__)
 
@@ -94,8 +94,9 @@ def log(message):  # simple wrapper for logging to stdout on heroku
 
 
 def process(message):
-
     message_l = message.lower()
+    temp_msg = re.sub(r'[^\w\s]', '', temp_msg)
+    temp_msg = temp_msg.lower()
     if message_l in responses:
         return responses[message_l]
 
