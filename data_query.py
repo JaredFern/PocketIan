@@ -112,7 +112,7 @@ def queryDB(question_num, query_args):
         for key in professors_dictionary:
             if prof == key.lower():
                 prof = key
-        if professor_name in professors_dictionary:
+        if prof in professors_dictionary:
             queried_prof = professors_dictionary[prof].classes
 
             return_message = prof + 'teaches '
