@@ -1,6 +1,8 @@
 import re
 import pdb
+from autocorrect import spell
 from fnmatch import fnmatch
+from dictionaries import *
 from data_query import queryDB
 
 NEXT_QUARTER = "spring"
@@ -47,8 +49,17 @@ def questionToPattern():
 
 
 def read_tokenize(chat):
+    print(chat)
     chat = re.sub(r'[^\w\s]', '', chat)
+    print (chat)
+    chat = chat.lower()
+    print(chat)
     tokenized_chat = re.split("[ ]", chat)
+    for i in range(len(tokenized_chat)):
+        print (tokenized_chat[i])
+        if (tokenized_chat[i] in professors_dictionary.keys() or tokenized_chat[i] == "memik" or tokenized_chat[i]== "eecs" or tokenized_chat[i] == "wu"):
+            continue
+        tokenized_chat[i] = spell(tokenized_chat[i])
     return tokenized_chat
 
 
@@ -61,8 +72,8 @@ def join_lower(str1):
 
 
 def match_question(chat_text):
-    print (chat_text)
     tokenized_chat = read_tokenize(chat_text)
+    print (tokenized_chat)
     # tokenized question list, no punctuation
     question_list_parsed = questionToPattern()
     curr_question_ind = 0
@@ -103,6 +114,6 @@ def match_question(chat_text):
             # print (query_args)
             return queryDB(curr_question_ind, query_args)
         curr_question_ind += 1
-    return ("Try another question:\n", question_list)
+    return ("Try another question:\n" + str(question_list)[1:-1])
 
-match_question("What are the prerequisites for eecs 348?")
+match_question("What are memik the pre@!#$requisittes for eecs 348?")
