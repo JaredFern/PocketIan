@@ -94,6 +94,10 @@ def log(message):  # simple wrapper for logging to stdout on heroku
 
 
 def process(message):
+    message_l = message.lower()
+    if message_l in responses:
+        return responses[message_l]
+
     return match_question(message)
     # test = "try: "
 

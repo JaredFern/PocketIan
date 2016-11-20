@@ -607,3 +607,10 @@ course_dictionary = {
          'Project': 0,
          'Quarters': [1, 0, 0],
          'Title': 'Probabilistic Graphical Models'}}
+
+responses = {
+    'hi':'Hello, there.',
+    'bye':'Good luck in your endeavors!',
+    'what are you up to?': 'Real Ian is researching AI and interactive entertainment',
+    'what\'s your favorite class': 'The university offers a wide range of classes, but I enjoy the ones I teach the most'
+}
