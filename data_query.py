@@ -162,7 +162,7 @@ def queryDB(question_num, query_args):
                 prof = key
         if prof in professors_dictionary:
             score = professors_dictionary[prof].avg_ctec
-            return "That professor is great, their average CTEC score is " + score
+            return "That professor is great, their average CTEC score is " + str(score)
         else:
             return "I don't know who that professor is..."
 
