@@ -5,7 +5,7 @@ from fnmatch import fnmatch
 from dictionaries import *
 from data_query import queryDB
 
-NEXT_QUARTER = "spring"
+NEXT_QUARTER = "winter"
 
 global question_list, question_list_parsed
 question_list, question_list_parsed = [], []
