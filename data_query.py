@@ -48,7 +48,7 @@ def queryDB(question_num, query_args):
                 if len(quarters_offered) == 1:
                     return "No, but " + class_name + " is offered in the " + quarters_offered[0]
                 if len(quarters_offered) == 2:
-                    return "No, but " + class_name + " is offered in the " + quarters_offered[0] + "and the " + quarters_offered[1]
+                    return "No, but " + class_name + " is offered in the " + quarters_offered[0] + " and the " + quarters_offered[1]
         else:
             return ("I don't think that's a valid EECS course!")
 
@@ -80,7 +80,7 @@ def queryDB(question_num, query_args):
             if course_dictionary[each]['Breadths'][breadth_index]:
                 breadth_match.append(each)
 
-        return_message = 'The following EECS classes fulfill the " + query_args[0] + "requirement\n\n'
+        return_message = 'The following EECS classes fulfill the " + query_args[0] + " requirement\n\n'
         for each in breadth_match:
             return_message += each + ': ' + \
                 course_dictionary[each]['Title'] + '\n'
