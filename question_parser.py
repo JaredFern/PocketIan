@@ -124,5 +124,5 @@ def match_question(chat_text):
         curr_question_ind += 1
     return ("Try another question:\n") # + str(question_list)[1:-1])
 
-print (match_question("what are the prequisittes for eecs 348?"))
+print (match_question("What are the prerequisites for eecs 348?"))
 print (match_question("How are gergle's CTECs?"))
