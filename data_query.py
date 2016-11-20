@@ -12,7 +12,7 @@ def queryDB(question_num, query_args):
 
     elif (question_num == 2):
         if (query_args[0] in program_dict):
-            reqs = program_dict[query_args[0]]
+            reqs = program_dict[query_args[0]]["Requirements"]
         else:
             return ("That's not a valid EECS program!")
         return "The requirements for " + query_args[0] + " are " + reqs

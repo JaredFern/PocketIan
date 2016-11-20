@@ -94,7 +94,8 @@ def log(message):  # simple wrapper for logging to stdout on heroku
 
 
 def process(message):
-    temp_msg = re.sub(r'[^\w\s]', '', temp_msg)
+    message_l = message.lower()
+    temp_msg = re.sub(r'[^\w\s]', '', message)
     temp_msg = temp_msg.lower()
     if temp_msg in responses:
         return responses[temp_msg]
