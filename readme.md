@@ -2,30 +2,17 @@
 Automated Northwestern EECS Course Advisor
 
 Handled Questions:
-
-    "What are the prerequisites for *?",
     
-    "What is * prerequisite for?",
-    
-    "What are the * requirements?",
-    
-    "How do I declare *?",
-    
+    "What are the prerequisites for *?",   
+    "What do I need to take for *?",        
+    "What are the * requirements?",         
+    "How do I declare a *?",       
     "Is * offered * quarter?",
-    
-    "What quarters are * offered?",
-    
-    "What quarter is * offered?",
-    
-    "What’s * about?",
-    
-    "What time is * next quarter?",
-    
-    "Who teaches * during * quarter?",
-    
+    "Who teaches *?",
     "What courses count for *?",
-    
-    "What quarters are * offered?",
-    
-    "What quarter is * offered?",
-    
+    "Is * available * quarter?",
+    "What classes does * teach?",
+    "Does * count for the project requirement?",
+    "Does * count for the breadth requirement?",
+    "How are * s CTECs?",
+    "What courses are available * quarter?"
