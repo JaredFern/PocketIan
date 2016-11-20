@@ -618,5 +618,6 @@ responses = {
     'thank you': 'No problem',
     'bye':'Good luck in your endeavors!',
     'what are you up to?': 'Real Ian is researching AI and interactive entertainment',
-    'what\'s your favorite class': 'The university offers a wide range of classes, but I enjoy the ones I teach the most'
+    'what\'s your favorite class': 'The university offers a wide range of classes, but I enjoy the ones I teach the most',
+    'harambe':'dicks out'
 }

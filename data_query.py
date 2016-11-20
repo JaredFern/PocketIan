@@ -12,7 +12,7 @@ def queryDB(question_num, query_args):
 
     elif (question_num == 2):
         if (query_args[0] in program_dict):
-            reqs = program_dict[query_args[0]]
+            reqs = program_dict[query_args[0]]['Requirements']
         else:
             return ("That's not a valid EECS program!")
         return "The requirements for " + query_args[0] + " are\n " + reqs
@@ -80,10 +80,9 @@ def queryDB(question_num, query_args):
             if course_dictionary[each]['Breadths'][breadth_index]:
                 breadth_match.append(each)
 
-        return_message = 'The following EECS classes fulfill the " + query_args[0] + " requirement\n\n'
+        return_message = "The following EECS classes fulfill the " + query_args[0] + " requirement\n\n"
         for each in breadth_match:
-            return_message += each + ': ' + \
-                course_dictionary[each]['Title'] + '\n'
+            return_message += each + '\n'
 
         return return_message
 
@@ -109,12 +108,15 @@ def queryDB(question_num, query_args):
             return 'I don\'t think that course is being offered right now.'
 
     elif (question_num == 8):
-        professor_name = query_args[0]
-        if professor_name in professors_dictionary:
-            queried_prof = professors_dictionary[professor_name].classes
+        prof = query_args[0]
+        for key in professors_dictionary:
+            if prof == key.lower():
+                prof = key
+        if prof in professors_dictionary:
+            queried_prof = professors_dictionary[prof]
 
-            return_message = professor_name + 'teaches '
-            for course in queried_prof.classes:
+            return_message = prof + ' teaches '
+            for course in queried_prof.courses:
                 return_message += 'EECS ' + course + ', '
             return return_message[:-2]
 
