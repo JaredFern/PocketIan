@@ -53,7 +53,7 @@ def read_tokenize(chat):
     chat = chat.lower()
     tokenized_chat = re.split("[ ]", chat)
     for i in range(len(tokenized_chat)):
-        print (tokenized_chat[i])
+        # print (tokenized_chat[i])
         if (tokenized_chat[i] in professors_dictionary.keys() or tokenized_chat[i] == "memik" or tokenized_chat[i]== "eecs" or tokenized_chat[i] == "wu"):
             continue
         tokenized_chat[i] = spell(tokenized_chat[i])

@@ -56,7 +56,7 @@ def queryDB(question_num, query_args):
         course_num = query_args[0]
         if(course_num in course_dictionary):
             prof = course_dictionary[course_num]["Professor"]
-            return "Professor " + prof + "teaches that class."
+            return "Professor " + prof + " teaches that class."
         else:
             return "I don't think that's a valid EECS class."
 
