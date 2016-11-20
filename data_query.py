@@ -108,11 +108,14 @@ def queryDB(question_num, query_args):
             return 'I don\'t think that course is being offered right now.'
 
     elif (question_num == 8):
-        professor_name = query_args[0]
+        prof = query_args[0]
+        for key in professors_dictionary:
+            if prof == key.lower():
+                prof = key
         if professor_name in professors_dictionary:
-            queried_prof = professors_dictionary[professor_name].classes
+            queried_prof = professors_dictionary[prof].classes
 
-            return_message = professor_name + 'teaches '
+            return_message = prof + 'teaches '
             for course in queried_prof.classes:
                 return_message += 'EECS ' + course + ', '
             return return_message[:-2]
