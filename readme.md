@@ -2,7 +2,8 @@
 Automated Northwestern EECS Course Advisor
 
 Handled Questions:
-    "What are the prerequisites for *?",    
+    
+    "What are the prerequisites for *?",   
     "What do I need to take for *?",        
     "What are the * requirements?",         
     "How do I declare a *?",       
