@@ -82,7 +82,7 @@ def queryDB(question_num, query_args):
 
         return_message = "The following EECS classes fulfill the " + query_args[0] + " requirement\n\n"
         for each in breadth_match:
-            return_message += each + '\n'
+            return_message += each + ': ' + course_dictionary[each]['Title'] + '\n'
 
         return return_message
 
