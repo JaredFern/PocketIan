@@ -49,9 +49,9 @@ def read_tokenize(chat):
 
 def join_lower (str1):
     str1 = "".join(str1)
-    str1.lower()
-    str1.replace('next', NEXT_QUARTER)
-    str1.replace('eecs', "")
+    str1 = str1.lower()
+    str1 = str1.replace('next', NEXT_QUARTER)
+    str1 = str1.replace('eecs', "")
     return str1
 
 def match_question(chat_text):
@@ -100,4 +100,4 @@ def match_question(chat_text):
         curr_question_ind += 1
     return ("Try another question:\n", question_list)
 
-match_question("What are the prerequisites for 348?")
+match_question("What are the prerequisites for eecs 348?")
