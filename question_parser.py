@@ -114,6 +114,3 @@ def match_question(chat_text):
             return queryDB(curr_question_ind, query_args)
         curr_question_ind += 1
     return ("Try another question:\n") # + str(question_list)[1:-1])
-
-match_question("what are the prequisittes for eecs 348?")
-match_question("how are downey's CTEC's?")
