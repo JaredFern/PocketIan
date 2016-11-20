@@ -273,7 +273,7 @@ course_dictionary = {
          'Title': 'Intro to Computer Graphics'},
  '352': {'Breadths': [0, 0, 1, 0, 0],
          'Core': 0,
-         'Pre-Requisities': 'Prior programming experience sufficient to be able to do laboratory assignments in MATLAB is required. Completion of the Engineering Analysis ( GEN_ENG 205-2 ) series or EECS 211 or EECS 231 would demonstrate sufficient experience. An ability and willingness to 1)  learn about things outside your own area of expertise. 2) come up with something cool and MAKE it in software. 3) think scientifically about the arts. (Yes, it IS possible)',
+         'Pre-Requisities': 'Prior programming experience sufficient to be able to do laboratory assignments in MATLAB is required.',
          'Professor': 'Pardo',
          'Project': 1,
          'Quarters': [0, 1, 0],
