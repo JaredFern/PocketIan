@@ -142,13 +142,13 @@ def queryDB(question_num, query_args):
                 return_message = 'EECS ' + course + ' fulfills '
                 if breadth_list[0]:
                     return_message += 'Theory, '
-                if breadth_list[0]:
+                if breadth_list[1]:
                     return_message += 'Systems, '
-                if breadth_list[0]:
+                if breadth_list[2]:
                     return_message += 'A.I., '
-                if breadth_list[0]:
+                if breadth_list[3]:
                     return_message += 'Interfaces, '
-                if breadth_list[0]:
+                if breadth_list[4]:
                     return_message += 'Software, '
                 return return_message[:-2]
             else:
