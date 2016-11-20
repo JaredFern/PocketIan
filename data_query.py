@@ -12,10 +12,10 @@ def queryDB(question_num, query_args):
 
     elif (question_num == 2):
         if (query_args[0] in program_dict):
-            reqs = program_dict[query_args[0]]["Requirements"]
+            reqs = program_dict[query_args[0]]
         else:
             return ("That's not a valid EECS program!")
-        return "The requirements for " + query_args[0] + " are " + reqs
+        return "The requirements for " + query_args[0] + " are\n " + reqs
 
     elif (question_num == 3):
         if(query_args[0] == "major"):
@@ -66,7 +66,7 @@ def queryDB(question_num, query_args):
             breadth_index = 0
         elif breadth_query == 'systems':
             breadth_index = 1
-        elif breadth_query == 'a.i.' or breadth_query == 'ai':
+        elif breadth_query == 'a.i.':
             breadth_index = 2
         elif breadth_query == 'interfaces':
             breadth_index = 3
@@ -80,9 +80,10 @@ def queryDB(question_num, query_args):
             if course_dictionary[each]['Breadths'][breadth_index]:
                 breadth_match.append(each)
 
-        return_message = 'The following EECS classes fulfill the ' + query_args[0] + ' requirement\n\n'
+        return_message = 'The following EECS classes fulfill the " + query_args[0] + " requirement\n\n'
         for each in breadth_match:
-            return_message += each + '\n'
+            return_message += each + ': ' + \
+                course_dictionary[each]['Title'] + '\n'
 
         return return_message
 
@@ -139,13 +140,13 @@ def queryDB(question_num, query_args):
                 return_message = 'EECS ' + course + ' fulfills '
                 if breadth_list[0]:
                     return_message += 'Theory, '
-                if breadth_list[1]:
+                if breadth_list[0]:
                     return_message += 'Systems, '
-                if breadth_list[2]:
+                if breadth_list[0]:
                     return_message += 'A.I., '
-                if breadth_list[3]:
+                if breadth_list[0]:
                     return_message += 'Interfaces, '
-                if breadth_list[4]:
+                if breadth_list[0]:
                     return_message += 'Software, '
                 return return_message[:-2]
             else:
@@ -178,5 +179,6 @@ def queryDB(question_num, query_args):
         for each in course_dictionary:
             course_quarters = course_dictionary[each]['Quarters']
             if course_quarters[quarter_index]:
-                return_message += each + '\n'
+                return_message += each + ': ' + \
+                    course_dictionary[each]['Title'] + '\n'
         return return_message

@@ -43,7 +43,7 @@ question_list = [
 def questionToPattern():
     question_list_parsed = []
     for each in question_list:
-        question_list_parsed.append(re.split('[ ?]', each))
+        question_list_parsed.append(re.split('[ \'?]', each))
         each = re.sub(r'[^\w\s]', '', each)
     return question_list_parsed
 
@@ -51,14 +51,25 @@ def questionToPattern():
 def read_tokenize(chat):
     chat = re.sub(r'[^\w\s\']', '', chat)
     chat = chat.lower()
-    tokenized_chat = re.split("[ |\']", chat)
+    tokenized_chat  = re.split("[ |\']", chat)
+
+    lower_profs     = []
+    for each in professors_dictionary.keys():
+        lower_profs.append(each.lower())
+        print (type(each))
+
     for i in range(len(tokenized_chat)):
-        # print (tokenized_chat[i])
-        if (tokenized_chat[i] in professors_dictionary.keys() or tokenized_chat[i] in professors_dictionary.keys() or  tokenized_chat[i] == "memik" or tokenized_chat[i]== "eecs" or tokenized_chat[i] == "wu"):
+        if (tokenized_chat[i] in lower_profs or\
+            tokenized_chat[i] == "memik" or\
+            tokenized_chat[i] == "eecs" or\
+            tokenized_chat[i] == "wu" or \
+            tokenized_chat[i] == "ctecs"):
             continue
-        print (tokenized_chat[i])
 
         tokenized_chat[i] = spell(tokenized_chat[i])
+
+
+    print (tokenized_chat)
     return tokenized_chat
 
 
@@ -110,7 +121,9 @@ def match_question(chat_text):
                     # print ("not added", question[word_ind])
                     qword_ind += 1
             # print (query_args)
-            print ('Question: ', question_list[curr_question_ind], query_args)
             return queryDB(curr_question_ind, query_args)
         curr_question_ind += 1
     return ("Try another question:\n") # + str(question_list)[1:-1])
+
+print (match_question("what are the prequisittes for eecs 348?"))
+print (match_question("how are gergle's CTECs?"))
