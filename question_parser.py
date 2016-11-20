@@ -49,11 +49,8 @@ def questionToPattern():
 
 
 def read_tokenize(chat):
-    print(chat)
     chat = re.sub(r'[^\w\s]', '', chat)
-    print (chat)
     chat = chat.lower()
-    print(chat)
     tokenized_chat = re.split("[ ]", chat)
     for i in range(len(tokenized_chat)):
         print (tokenized_chat[i])
@@ -73,7 +70,6 @@ def join_lower(str1):
 
 def match_question(chat_text):
     tokenized_chat = read_tokenize(chat_text)
-    print (tokenized_chat)
     # tokenized question list, no punctuation
     question_list_parsed = questionToPattern()
     curr_question_ind = 0
@@ -114,6 +110,6 @@ def match_question(chat_text):
             # print (query_args)
             return queryDB(curr_question_ind, query_args)
         curr_question_ind += 1
-    return ("Try another question:\n" + str(question_list)[1:-1])
+    return ("Try another question:\n") # + str(question_list)[1:-1])
 
 match_question("What are memik the pre@!#$requisittes for eecs 348?")
