@@ -66,9 +66,9 @@ def queryDB(question_num, query_args):
             breadth_index = 0
         elif breadth_query == 'systems':
             breadth_index = 1
-        elif breadth_query == 'ai':
-            breadth_index = 2
         elif breadth_query == 'interfaces':
+            breadth_index = 2
+        elif breadth_query == 'ai':
             breadth_index = 3
         elif breadth_query == 'software':
             breadth_index = 4
@@ -145,9 +145,9 @@ def queryDB(question_num, query_args):
                 if breadth_list[1]:
                     return_message += 'Systems, '
                 if breadth_list[2]:
-                    return_message += 'A.I., '
-                if breadth_list[3]:
                     return_message += 'Interfaces, '
+                if breadth_list[3]:
+                    return_message += 'AI, '
                 if breadth_list[4]:
                     return_message += 'Software, '
                 return return_message[:-2]
