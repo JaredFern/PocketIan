@@ -8,12 +8,12 @@ for key in course_dictionary:
     q.append("What are the prerequisites for *?".replace("*", key)) #q0
     q.append("What do I need to take for *?".replace("*", key)) #q1
     q.append("Who teaches *?".replace('*', key))#q5
-    for depth in ["Theory","Interfaces","Systems","A.I.","Software"]:#q6
-        q.append("What courses count for *?".replace("*",depth))
     for quarter in ["fall","winter","spring"]:
         tmp = "Is * offered ^ quarter?".replace('*',key)#q4
         tmp = tmp.replace('^',quarter)
         q.append(tmp)
+for depth in ["Theory", "Interfaces", "Systems", "A.I.", "Software"]:  # q6
+    q.append("What courses count for *?".replace("*", depth))
 # iterate through programs
 for key in program_dict:
     q.append("What are the * requirements?".replace("*", key)) #q2
