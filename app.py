@@ -2,7 +2,7 @@ import os
 import sys
 import json
 import re
-from question_parser import * 
+from question_parser import *
 import requests
 from flask import Flask, request
 from autocorrect import spell
@@ -42,15 +42,15 @@ def webhook():
                         "id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text) # split string into list of alphabetical
-                    corrected = ''                                            # and non alphabetical substrings
-                    for word in words:
-                        if re.match(r"[a-zA-Z]+$", word):  # only spell check the alphabetical strings
-                            word = spell(word)
-                        corrected += word
+                    # words = re.findall(r"[a-zA-Z]+|[^a-zA-Z]+", message_text) # split string into list of alphabetical
+                    # corrected = ''                                            # and non alphabetical substrings
+                    # for word in words:
+                    #     if re.match(r"[a-zA-Z]+$", word):  # only spell check the alphabetical strings
+                    #         word = spell(word)
+                    #     corrected += word
 
 
-                    response_text = process(corrected)
+                    response_text = process(message_text)
                     send_message(sender_id, response_text)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
