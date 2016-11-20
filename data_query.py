@@ -54,8 +54,8 @@ def queryDB(question_num, query_args):
 
     elif (question_num == 5):
         course_num = query_args[0]
-        if(class_name in course_dictionary):
-            prof = course_dictionary[class_name]["Quarters"]["Professor"]
+        if(course_num in course_dictionary):
+            prof = course_dictionary[course_num]["Quarters"]["Professor"]
             return "Professor " + prof + "teaches that class."
         else:
             return "I don't think that's a valid EECS class."
