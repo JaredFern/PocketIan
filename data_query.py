@@ -80,10 +80,9 @@ def queryDB(question_num, query_args):
             if course_dictionary[each]['Breadths'][breadth_index]:
                 breadth_match.append(each)
 
-        return_message = 'The following EECS classes fulfill the " + query_args[0] + " requirement\n\n'
+        return_message = 'The following EECS classes fulfill the ' + query_args[0] + ' requirement\n\n'
         for each in breadth_match:
-            return_message += each + ': ' + \
-                course_dictionary[each]['Title'] + '\n'
+            return_message += each + ': ' + '\n'
 
         return return_message
 
