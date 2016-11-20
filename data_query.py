@@ -46,7 +46,7 @@ def queryDB(question_num, query_args):
                 if len(quarters_offered) == 0:
                     return "Sorry, " + class_name + " is not offered this year"
                 if len(quarters_offered) == 1:
-                    return "No, but " + class_name + "is offered in the " + quarters_offered[0]
+                    return "No, but " + class_name + " is offered in the " + quarters_offered[0]
                 if len(quarters_offered) == 2:
                     return "No, but " + class_name + " is offered in the " + quarters_offered[0] + "and the " + quarters_offered[1]
         else:
@@ -102,9 +102,9 @@ def queryDB(question_num, query_args):
 
         if course in course_dictionary.keys():
             if course_dictionary[course]['Quarters'][quarter_index]:
-                return 'Yes! ' + course + 'is offered in ' + query_args[1]
+                return 'Yes! ' + course + ' is offered in ' + quarter
             else:
-                return 'No, ' + course + 'is not offered in ' + query_args[0]
+                return 'No, ' + course + ' is not offered in ' + quarter
         else:
             return 'I don\'t think that course is being offered right now.'
 

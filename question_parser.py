@@ -14,7 +14,7 @@ question_list = [
     "What are the prerequisites for *?",    # Course
     "What do I need to take for *?",        # Course
     "What are the * requirements?",         # major, minor, theme, honors, masters
-    "How do I declare a * in EECS?",                  # major, HARD CODE
+    "How do I declare a *?",                  # major, HARD CODE
 
     "Is * offered * quarter?",              # course, quarter
     # Is eecs 349 offered winter quarter?
@@ -112,4 +112,4 @@ def match_question(chat_text):
         curr_question_ind += 1
     return ("Try another question:\n") # + str(question_list)[1:-1])
 
-match_question("What are memik the pre@!#$requisittes for eecs 348?")
+match_question("what are the prequisittes for eecs 348?")
