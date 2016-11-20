@@ -186,5 +186,5 @@ def queryDB(question_num, query_args):
             course_quarters = course_dictionary[each]['Quarters']
             if course_quarters[quarter_index]:
                 return_message += each + ': ' + \
-                    course_dictionary[each]['Title'] + '\n'
+                    course_dictionary[each] + '\n'
         return return_message
