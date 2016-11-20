@@ -66,7 +66,7 @@ def queryDB(question_num, query_args):
             breadth_index = 0
         elif breadth_query == 'systems':
             breadth_index = 1
-        elif breadth_query == 'a.i.':
+        elif breadth_query == 'a.i.' or breadth_query == 'ai':
             breadth_index = 2
         elif breadth_query == 'interfaces':
             breadth_index = 3
